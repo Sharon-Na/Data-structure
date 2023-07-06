@@ -1,0 +1,5 @@
+﻿  stack으로 queue 만들기.cpp
+C:\Users\Sharon Na\Desktop\programming\자료구조 연습장\자료구조 연습장\stack으로 queue 만들기.cpp(117,16): error C2280: 'Queue<int>::Queue(void)': 삭제된 함수를 참조하려고 합니다.
+C:\Users\Sharon Na\Desktop\programming\자료구조 연습장\자료구조 연습장\stack으로 queue 만들기.cpp(114,1): message : 컴파일러에서 여기에 'Queue<int>::Queue'을(를) 생성했습니다.
+C:\Users\Sharon Na\Desktop\programming\자료구조 연습장\자료구조 연습장\stack으로 queue 만들기.cpp(114,1): message : 'Queue<int>::Queue(void)': 데이터 멤버 'Queue<int>::outbox'에 적절한 기본 생성자이(가) 없거나 오버로드 확인이 모호하므로 함수가 암시적으로 삭제되었습니다.
+C:\Users\Sharon Na\Desktop\programming\자료구조 연습장\자료구조 연습장\stack으로 queue 만들기.cpp(69,14): message : 'Queue<int>::outbox' 선언을 참조하십시오.
