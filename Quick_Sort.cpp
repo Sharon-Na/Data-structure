@@ -6,7 +6,7 @@ int Partition(int* arr, int low, int high) {
     int pivot = arr[high]; // 피벗으로 배열의 마지막 원소 선택
     int i = low - 1; // 피벗보다 작은 원소들을 찾기 위한 인덱스
 
-    // 피벗보다 작은 원소를 왼쪽으로 이동시킴
+    // 피벗보다 작은 원소를 왼쪽으로 이동
     for (int j = low; j <= high - 1; j++) {
         if (arr[j] < pivot) {
             i++;
@@ -14,7 +14,7 @@ int Partition(int* arr, int low, int high) {
         }
     }
     
-    // 피벗을 정렬된 위치로 이동
+    // 피벗 정렬된 위치로 이동
     swap(arr[i + 1], arr[high]);
     return i + 1;
 }
@@ -22,13 +22,13 @@ int Partition(int* arr, int low, int high) {
 // 퀵 정렬 함수
 void QuickSort(int* arr, int low, int high) {
     if (low < high) {
-        int partitionIndex = Partition(arr, low, high); // 파티션 함수를 호출하여 피벗의 인덱스를 얻음
-        QuickSort(arr, low, partitionIndex - 1); // 왼쪽 부분 배열을 정렬
-        QuickSort(arr, partitionIndex + 1, high); // 오른쪽 부분 배열을 정렬
+        int partitionIndex = Partition(arr, low, high); // 파티션 함수를 호출해 피벗의 인덱스를 얻기
+        QuickSort(arr, low, partitionIndex - 1); // 왼쪽 부분 배열 정렬
+        QuickSort(arr, partitionIndex + 1, high); // 오른쪽 부분 배열 정렬
     }
 }
 
-// 테스트를 위한 함수
+// 테스트용 함수
 void PrintArray(const int* arr, int size) {
     for (int i = 0; i < size; i++) {
         cout << arr[i] << " ";
