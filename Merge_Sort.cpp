@@ -2,7 +2,7 @@
 using namespace std;
 
 
-// 합병하는 함수
+// 합병 기능 함수
 void Merge(int* arr, int left, int middle, int right) {
     int leftSize = middle - left + 1;
     int rightSize = right - middle;
@@ -17,7 +17,7 @@ void Merge(int* arr, int left, int middle, int right) {
     for (int i = 0; i < rightSize; i++)
         rightArr[i] = arr[middle + 1 + i];
 
-    // 두 임시 배열을 합병하여 원본 배열에 정렬된 상태로 저장
+    // 두 임시 배열을 합병, 원본 배열에 정렬된 상태로 저장
     int i = 0, j = 0, k = left;
     while (i < leftSize && j < rightSize) {
         if (leftArr[i] <= rightArr[j]) {
@@ -29,9 +29,9 @@ void Merge(int* arr, int left, int middle, int right) {
             j++;
         }
         k++;
-    }
+    } 
   
-    // 남은 원소들을 원본 배열에 저장
+    // 남은 원소들 원본 배열에 저장
     while (i < leftSize) {
         arr[k] = leftArr[i];
         i++;
@@ -43,7 +43,7 @@ void Merge(int* arr, int left, int middle, int right) {
         k++;
     }
 
-    // 임시 배열 해제
+    // 임시 배열 반환
     delete[] leftArr;
     delete[] rightArr;
 }
@@ -58,7 +58,7 @@ void MergeSort(int* arr, int left, int right) {
     }
 }
 
-// 테스트를 위한 함수
+// 테스트용 함수
 void PrintArray(const int* arr, int size) {
     for (int i = 0; i < size; i++) {
         cout << arr[i] << " ";
