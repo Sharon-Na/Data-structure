@@ -1,4 +1,6 @@
 #include <iostream>
+using namespace std;
+
 
 // 합병하는 함수
 void Merge(int* arr, int left, int middle, int right) {
@@ -59,22 +61,22 @@ void MergeSort(int* arr, int left, int right) {
 // 테스트를 위한 함수
 void PrintArray(const int* arr, int size) {
     for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 int main() {
     int arr[] = { 38, 27, 43, 3, 9, 82, 10 }; // 테스트용 배열
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    std::cout << "정렬 전 배열: ";
+    cout << "정렬 전 배열: ";
     PrintArray(arr, size);
 
     // 합병정렬 호출
     MergeSort(arr, 0, size - 1);
 
-    std::cout << "정렬 후 배열: ";
+    cout << "정렬 후 배열: ";
     PrintArray(arr, size);
 
     return 0;
